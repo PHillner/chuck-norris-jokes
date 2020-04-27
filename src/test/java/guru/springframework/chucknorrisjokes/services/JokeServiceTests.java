@@ -1,5 +1,6 @@
 package guru.springframework.chucknorrisjokes.services;
 
+import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +17,7 @@ public class JokeServiceTests {
 
     @Before
     public void setUp() {
-        jokeService = new JokeServiceImpl();
+        jokeService = new JokeServiceImpl(new ChuckNorrisQuotes());
     }
 
     @Test
